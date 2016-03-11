@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'app/front#index'
 
+  post 'board', to: 'app/front#index', as: 'board_id'
+
   devise_for :users, skip: KepplerConfiguration.skip_module_devise
 
   namespace :admin do

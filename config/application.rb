@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'trello'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -14,6 +15,10 @@ module InyxmaterRails
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    Trello.configure do |config|
+      config.developer_public_key = 'f5337baa535ec8effb11945258e1b0fc' # The "key" from step 1
+      config.member_token = '828ef5a50a4d8bc82fd7daf8a1218207ddb8566ad6dc60e9eb3a5e912c0afdce' # The token from step 3.
+    end
     # Enable the asset pipeline
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 

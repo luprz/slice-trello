@@ -59,6 +59,8 @@ gem 'elasticsearch-rails'
 gem 'kaminari-i18n'
 gem 'kaminari'
 
+gem 'ruby-trello'
+
 # Development
 group :development, :test do
   gem 'better_errors'
